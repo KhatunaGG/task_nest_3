@@ -1,9 +1,9 @@
 import { MiddlewareConsumer, Module, NestModule, RequestMethod } from '@nestjs/common';
 import { ExpensesService } from './expenses.service';
 import { ExpensesController } from './expenses.controller';
-import { Permission } from './permission.middleware';
-import { Timepermission } from './timepermission.middleware';
-import { UserAgent } from './userAgent.middleware';
+import { Permission } from './expensesMiddlewares/permission.middleware';
+import { Timepermission } from './expensesMiddlewares/timepermission.middleware';
+import { UserAgent } from './expensesMiddlewares/userAgent.middleware';
 
 @Module({
   controllers: [ExpensesController],
